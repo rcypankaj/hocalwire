@@ -1,0 +1,152 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Libre Baskerville", serif;
+}
+
+#container {
+  display: grid;
+  grid-template-columns: 1fr;
+  height: auto;
+  margin-top: 20px;
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-self: center;
+}
+
+#image__card {
+  max-width: 700px;
+}
+
+#image__card--container {
+  position: relative;
+  justify-self: center;
+}
+
+.card__details--image {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  position: absolute;
+  bottom: 3rem;
+  color: white;
+  left: 2rem;
+  padding-right: 2rem;
+}
+
+.label {
+  background-color: grey;
+  color: white;
+  font-size: 0.8rem;
+  height: 1.3rem;
+  width: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+}
+
+.image {
+  width: 100%;
+}
+
+.author {
+  font-size: 0.8rem;
+  color: gray;
+}
+
+.card__item {
+  width: 20.625rem;
+  height: 13.4375rem;
+  padding: 1rem;
+  border: 1px solid gray;
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+}
+
+.card__label,
+.icons {
+  position: absolute;
+}
+
+.icons {
+  right: 1rem;
+}
+
+.fa.fa-share {
+  margin-right: 10px;
+}
+
+.card__details h2 {
+  margin: 2rem 0 1rem 0;
+  font-size: 1.1rem;
+}
+
+.card__details p {
+  margin-bottom: 1rem;
+  font-size: 0.8rem;
+}
+
+.card__details span {
+  font-size: 0.8rem;
+}
+
+#label__decode {
+  background-color: rgba(225, 154, 87, 0.3);
+  color: #c62c0d;
+  font-weight: 400;
+}
+
+#label__sports {
+  background: none;
+  color: black;
+  font-weight: 700;
+  justify-content: flex-start;
+}
+
+.label.label__fact-check {
+  background-color: rgba(225, 154, 87, 0.3);
+  color: #c62c0d;
+  width: 5.8rem;
+}
+
+.card__item:hover,
+#image__card--container:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  transition: box-shadow 0.3s ease;
+}
+
+@media (min-width: 57rem) {
+  #container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .card__item {
+    width: 45%;
+    height: auto;
+  }
+  #image__card--container {
+    background: linear-gradient(to bottom, transparent 0, #000 100%);
+  }
+}
+
+@media (min-width: 87.5rem) {
+  .card__item {
+    width: 20.625rem;
+    height: 13.4375rem;
+  }
+}
