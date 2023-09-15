@@ -7,7 +7,6 @@ imageCard.addEventListener("click", () => {
 });
 
 cards.forEach((el, index) => {
-  console.log(el);
   el.addEventListener("click", () => {
     if (index == 0) {
       window.location.href =
